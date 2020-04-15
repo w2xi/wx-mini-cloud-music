@@ -1,12 +1,19 @@
-# 云开发 quickstart
+# 云音乐  
+## 音乐
+- 轮播图  
+- 歌单列表  
+- 音乐列表  
+- 播放器(上一首/下一首/播放，暂停/播放进度条/歌词联动)  
+- 自定义组件(playlist, musiclist, lyric, progress-bar)
+## 发现  
+- 授权登录    
+- 发布博客  
+- 模糊搜索  
+- 博客评论，分享  
+- 自定义组件( blog-card, search, blog-ctl, auth-login, bottom-popup)  
+## 我的
+- 音乐播放历史  
+- 我的发现记录  
+- 小程序码生成  
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
-
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
-
-## 参考文档
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
