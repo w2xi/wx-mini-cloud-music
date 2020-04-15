@@ -1,0 +1,7 @@
+<view class="mask" hidden="{{!isPopupShow}}">
+  <view class="popup-panel" style="bottom:{{popupBottom}}rpx">
+    <i class="iconfont icon-shanchu" bind:tap="onClose"></i>
+    <!-- 具名插槽 -->
+    <slot name="modal-content"></slot>
+  </view>
+</view>

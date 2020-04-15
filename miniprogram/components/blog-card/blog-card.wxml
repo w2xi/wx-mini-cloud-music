@@ -1,0 +1,15 @@
+<view class="blog-container">
+  <view class="blog-title">
+    <image class="blog-avatar" src="{{blogItemInfo.avatar}}"></image>
+    <view class="blog-box">
+      <view class="blog-nickname">{{blogItemInfo.nickname}}</view>
+      <view class="blog-createTime">{{_createTime}}</view>
+    </view>
+  </view>
+  <view class="blog-content">{{blogItemInfo.content}}</view>
+  <view class="blog-image">
+    <block wx:for="{{blogItemInfo.img}}" wx:key="item">
+      <image lazy-load="true" catch:tap="onPreview" data-imgsrc="{{item}}" class="img" src="{{item}}" mode="aspectFill"></image>
+    </block>
+  </view>
+</view>

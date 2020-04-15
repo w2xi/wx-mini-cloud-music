@@ -1,0 +1,8 @@
+<view class="bg-container" style="background:url({{coverInfo.coverImgUrl}}) no-repeat top/cover"></view>
+<view class="mask"></view>
+<view class="coverInfo">
+  <image class="coverInfo-img" src="{{coverInfo.coverImgUrl}}"></image>
+  <view class="coverInfo-name">{{coverInfo.name}}</view>
+</view>
+
+<x-musiclist musiclist="{{musiclist}}"></x-musiclist>

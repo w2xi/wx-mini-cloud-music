@@ -1,0 +1,25 @@
+<x-blog-card blogItemInfo="{{blogInfo}}"/>
+
+<view class="comment-list">
+  <view class="title">评论列表</view>
+  <block wx:for="{{blogComment}}">
+    <view class="comment-item">
+      <view class="comment-head">
+        <image class="avatar" src="{{item.avatar}}"></image>
+        <view class="comment-box">
+          <view class="nickname">{{item.nickname}}</view>
+          <view class="createTime">{{item.createTime}}</view>
+        </view>
+      </view>
+      <view class="comment-content">{{item.content}}</view>
+    </view>
+  </block>
+</view>
+
+<!-- 评论和分享功能 -->
+<view class="blog-ctr">
+  <x-blog-ctr blogId="{{blogId}}" blogItemInfo="{{blogInfo}}" iconfont="iconfont" 
+          icon-comment="icon-comment"
+          icon-fenxiang="icon-fenxiang"
+          bind:onRefresh="onRefresh" />
+</view>

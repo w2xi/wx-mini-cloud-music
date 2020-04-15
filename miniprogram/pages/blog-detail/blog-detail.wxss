@@ -1,0 +1,45 @@
+.blog-ctr{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.comment-list{
+  margin-bottom: 100rpx;
+}
+.title{
+  font-size: 36rpx;
+  background-color: #fff;
+  color: #333;
+  padding: 20rpx;
+  margin-top: 20rpx
+}
+.comment-item{
+  padding: 20rpx;
+  margin-top: 5rpx;
+  background-color: #fff;
+}
+.comment-head{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+.avatar{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.comment-box{
+  flex: 1;
+  padding-left: 20rpx;
+}
+.nickname{
+  color: #333;
+}
+.createTime{
+  color: #666;
+  font-size: 25rpx;
+}
+.comment-content{
+  padding: 10rpx;
+  font-size: 30rpx;
+}

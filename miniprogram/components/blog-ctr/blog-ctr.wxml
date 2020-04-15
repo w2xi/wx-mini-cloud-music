@@ -1,0 +1,30 @@
+<view class="blog-ctr">
+  <view class="ctr-item" bind:tap="onComment">
+    <i class="iconfont icon-comment icon"></i>
+    <text>评论</text>
+  </view>
+  <view class="ctr-item">
+    <button open-type="share" class="share-btn" hover-class="btn-hover" data-blog="{{blogItemInfo}}">
+      <i class="iconfont icon-fenxiang icon"></i>
+      <text>分享</text>
+    </button>
+  </view>
+</view>
+<!-- 使用登录授权组件 -->
+<x-auth-login isPopupShow="{{isLoginShow}}"
+bind:authLoginSuccess="authLoginSuccess"
+bind:authLoginFail="authLoginFail" />
+<!-- 使用底部弹出层组件 -->
+<x-bottom-popup popupBottom="{{popupBottom}}" isPopupShow="{{isCommentShow}}">
+  <view class="comment" slot="modal-content">
+    <textarea class="comment-content" 
+    placeholder="写评论" 
+    fixed="true" 
+    value="{{content}}"
+    bindinput="onInput"
+    bindfocus="onFocus"
+    bindblur="onBlur">
+     </textarea>
+    <button class="comment-btn" bind:tap="submitComment" size="mini">提交</button>
+  </view>
+</x-bottom-popup>

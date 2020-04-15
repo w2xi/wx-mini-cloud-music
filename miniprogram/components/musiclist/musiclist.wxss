@@ -1,0 +1,26 @@
+.musiclist-container{
+  display: flex;
+  /* 交叉轴方向对齐 */
+  align-items: center;
+  height: 120rpx;
+  padding: 0 10rpx;
+}
+.musiclist-index{
+  padding: 30rpx;
+  color: #666;
+}
+.musiclist-info{
+  flex: 1;
+}
+.musiclist-songName{
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+.musiclist-singer{
+  font-size: 24rpx;
+  color: #666;
+}
+.music-actived view,
+.music-actived text{
+  color: #d82c2c;
+}

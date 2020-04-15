@@ -1,0 +1,32 @@
+<view class="blog-container">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- 发布博客 -->
+    <view class="blog-release" bind:tap="onRelease">
+      <i class="iconfont icon-fabu"></i>
+    </view>
+    <!-- 搜索 -->
+    <view class="blog-search">
+      <!-- 组件存在样式隔离，因此全局样式文件iconfont.wxss无法直接被search组件使用。
+      解决办法：
+      1. copy一份iconfont.wxss到组件中
+      2. 将外部样式传递到 search 组件中
+       -->
+      <x-search bind:search="search" iconfont="iconfont" icon-sousuo="icon-sousuo" />
+    </view>
+  </view>
+  <!-- 博客列表 -->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <x-blog-card blogItemInfo="{{item}}" bind:tap="toBlogDetail" data-blogid="{{item._id}}" />  
+        <x-blog-ctr blogId="{{item._id}}" blogItemInfo="{{item}}" iconfont="iconfont" 
+          icon-comment="icon-comment"
+          icon-fenxiang="icon-fenxiang"  />
+      </view>
+    </block>
+  </view>
+  <!-- 底部弹出层 -->
+  <x-auth-login isPopupShow="{{isPopupShow}}"         bind:authLoginSuccess="authLoginSuccess"
+  bind:authLoginFail="authLoginFail" />
+</view>

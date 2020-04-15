@@ -1,0 +1,28 @@
+<view class="release-container">
+  <textarea class="release-content"
+    placeholder-class="placeholder-text"
+    bindinput="contentChange" 
+    placeholder="说点什么吧..." 
+    maxlength="140" 
+    auto-focus="true"
+    bindfocus="onFocus"
+    bindblur="onBlur"
+    >
+  </textarea>
+  <view class="notice">最多发布9张图片</view>
+  <view class="images-wrap">
+    <view class="img-item" wx:for="{{images}}" wx:key="*this">
+      <image bind:tap="onPreview" data-imgsrc="{{item}}" class="img" src="{{item}}" mode="aspectFill"></image>
+      <i bind:tap="removeImg" data-index="{{index}}" class="iconfont icon-shanchu"></i>
+    </view>
+    <view hidden="{{!isShowAddIcon}}" class="add-img-padding">
+      <view class="add-img" bind:tap="addImage">
+        <i class="iconfont icon-tianjia"></i>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer" style="bottom:{{footerBottom}}px">
+  <text class="content-len">{{contentLen}}</text>
+  <button bind:tap="submitRelease" size="mini" class="release-btn">发布</button>
+</view>

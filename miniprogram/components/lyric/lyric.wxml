@@ -1,0 +1,7 @@
+<scroll-view class="lyric-container" scroll-y="true" scroll-with-animation="true" scroll-top="{{scrollTop}}" hidden="{{isLyricShow}}">
+  <view class="lyric-panel">
+    <block wx:for="{{lyricInfo}}" wx:key="*this">
+      <view class="lyric-item {{playLyricIndex===index?'lyric-actived':''}}">{{item.lyric}}</view>
+    </block>
+  </view>
+</scroll-view>

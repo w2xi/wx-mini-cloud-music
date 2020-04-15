@@ -1,0 +1,6 @@
+<view class="search-container">
+  <i class="iconfont icon-sousuo"></i>
+  <!-- <i class="iconfont icon-shanchu"></i> -->
+  <input bindinput="onInput" class="search-key" placeholder="{{placeholder}}"></input>
+  <button bind:tap="onSearch" size="mini" class="search-btn">搜索</button>
+</view>

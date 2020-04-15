@@ -1,0 +1,23 @@
+<block wx:for="{{arr}}" wx:key="*this" wx:for-item="data" wx:for-index="idx">
+  <view><checkbox></checkbox>{{idx}}: {{data}}</view>
+</block>
+<button disabled="true" loading="true" bind:tap="swap">随机交换</button>
+
+<button bind:tap="getMusicInfo">获取音乐信息</button>
+<button bind:tap="getMovieInfo">获取电影信息</button>
+
+<button bind:tap="getLocation">获取地理位置</button>
+
+<view
+  id="outer"
+  bind:tap="handleTap1"
+  
+>
+  outer view
+  <view
+    id="inner"
+    catch:tap="handleTap3"
+  >
+    inner view
+  </view>
+</view>

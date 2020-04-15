@@ -1,0 +1,19 @@
+.lyric-container{
+  height: 750rpx;
+  width: 100%;
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  color: #ccc;
+}
+.lyric-panel{
+  position: relative;
+  top: 50%;
+}
+.lyric-item{
+  line-height: 1;
+  min-height: 64rpx;
+}
+.lyric-actived{
+  /* color: #d43c33; */
+  color: #2ECC71;
+}

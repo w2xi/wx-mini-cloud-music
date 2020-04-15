@@ -1,0 +1,21 @@
+.mask{
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+}
+.popup-panel{
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  min-height: 300rpx;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+/* 由于设置了 styleIsolation: apply-shared，因此可以对修改样式 */
+.icon-shanchu{
+  position: absolute;
+  top: 0; right: 0;
+  /* 增加可点击区域 */
+  padding: 30rpx; 
+}

@@ -1,0 +1,6 @@
+.auth-btn{
+  height: 80rpx;
+  background-color: #2ECC71;
+  color: #fff;
+  margin-top: 110rpx;
+}

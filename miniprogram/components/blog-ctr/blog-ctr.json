@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "x-auth-login": "/components/auth-login/auth-login",
+    "x-bottom-popup": "/components/bottom-popup/bottom-popup"
+  }
+}

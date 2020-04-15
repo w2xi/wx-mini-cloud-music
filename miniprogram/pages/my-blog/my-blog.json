@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "x-blog-card": "/components/blog-card/blog-card",
+    "x-blog-ctr": "/components/blog-ctr/blog-ctr"
+  },
+  "navigationBarTitleText": "我的发现"
+}

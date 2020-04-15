@@ -1,0 +1,38 @@
+<view class="profile-header">
+  <view class="bg-container">
+    <open-data type="userAvatarUrl" class="bg-avatar"></open-data>
+  </view>
+  <view class="mask"></view>
+  <view class="user-info">
+    <view class="user-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user-nickname">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+</view>
+
+<view class="nav">
+  <navigator class="item" url="/pages/play-history/play-history" hover-class="none">
+    <view class="content">
+      <i class="iconfont icon-bofang1 icon"></i>
+      <text class="title">最近播放</text>
+      <i class="iconfont icon-you"></i>
+    </view>
+  </navigator>
+  <navigator class="item" url="/pages/my-blog/my-blog" hover-class="none">
+    <view class="content">
+      <i class="iconfont icon-jilu icon"></i>
+      <text class="title">我的发现</text>
+      <i class="iconfont icon-you"></i>
+    </view>
+  </navigator>
+  <navigator class="item" hover-class="none" bindtap="getMiniCode">
+    <view class="content">
+      <i class="iconfont icon-ico icon"></i>
+      <text class="title">小程序码</text>
+      <i class="iconfont icon-you"></i>
+    </view>
+  </navigator>
+</view>

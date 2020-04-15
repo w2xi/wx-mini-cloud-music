@@ -1,0 +1,11 @@
+.swiper-img{
+  width: 100%;
+}
+.playlist-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.playlist-item{
+  padding: 15rpx;
+}

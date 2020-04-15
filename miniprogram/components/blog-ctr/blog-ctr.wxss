@@ -1,0 +1,55 @@
+.blog-ctr{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.ctr-item{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx;
+  font-size: 32rpx;
+  color: #666;
+  line-height: 1;
+}
+.ctr-item text{
+  font-size: 32rpx;
+}
+.icon{
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.comment{
+  padding: 20rpx;
+  overflow: hidden;
+}
+
+.comment .comment-btn{
+  float: right;
+  color: #fff;
+  background-color: #2ECC71;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+
+.blog-ctr .share-btn{
+  background: #fff;
+  font-weight: normal;
+  padding: 0;
+  color: #666;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.share-btn::after{
+  display: none;
+}
+.btn-hover{
+  background: #fff;
+}
+.btn-hover::after{
+  border: none;
+}
