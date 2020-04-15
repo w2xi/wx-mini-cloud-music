@@ -16,4 +16,9 @@
 - 我的发现记录  
 - 小程序码生成  
 
+## 预览
+预览图片放在 previewImg目录下  
 
+## 学习/参考
+慕课网：https://coding.imooc.com/class/373.html  
+官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
