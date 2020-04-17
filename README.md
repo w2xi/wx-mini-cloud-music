@@ -16,9 +16,15 @@
 - 我的发现记录  
 - 小程序码生成  
 
-## 预览
-预览图片放在 previewImg目录下  
-
+## 预览  
+![playlist](previewImg/playlist.png)
+![musiclist](previewImg/musiclist.png)
+![player](previewImg/player.png)
+![player-lyric](previewImg/player-lyric.png)
+![blog](previewImg/blog.png)
+![add_blog](previewImg/add_blog.png)
+![comment](previewImg/blog-comment.png)
+![profile](previewImg/profile.png)
 ## 学习/参考
 慕课网：https://coding.imooc.com/class/373.html  
 官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
