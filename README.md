@@ -25,6 +25,3 @@
 ![add_blog](previewImg/add_blog.png)
 ![comment](previewImg/blog-comment.png)
 ![profile](previewImg/profile.png)
-## 学习/参考
-慕课网：https://coding.imooc.com/class/373.html  
-官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
