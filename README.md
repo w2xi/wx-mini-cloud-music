@@ -16,4 +16,12 @@
 - 我的发现记录  
 - 小程序码生成  
 
-
+## 预览  
+![playlist](previewImg/playlist.png)
+![musiclist](previewImg/musiclist.png)
+![player](previewImg/player.png)
+![player-lyric](previewImg/player-lyric.png)
+![blog](previewImg/blog.png)
+![add_blog](previewImg/add_blog.png)
+![comment](previewImg/blog-comment.png)
+![profile](previewImg/profile.png)
