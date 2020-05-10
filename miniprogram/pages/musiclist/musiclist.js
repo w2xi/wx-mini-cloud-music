@@ -1,4 +1,7 @@
 // pages/musiclist/musiclist.js
+// 每次最多加载的歌曲数量
+const MAX_MUSIC_NUMS = 15;
+
 Page({
 
   /**
@@ -25,7 +28,7 @@ Page({
     }).then((res)=>{
       const pl = res.result.playlist
       this.setData({
-        musiclist: pl.tracks,
+        musiclist: pl.tracks.slice(0, MAX_MUSIC_NUMS),
         coverInfo: {
           name: pl.name,
           coverImgUrl: pl.coverImgUrl
@@ -79,7 +82,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    const musiclist = wx.getStorageSync('musiclist')
+    const len = this.data.musiclist.length
+    this.setData({
+      musiclist: this.data.musiclist.concat(musiclist.slice(len, len + MAX_MUSIC_NUMS))
+    })
+    wx.hideLoading()
   },
 
   /**
