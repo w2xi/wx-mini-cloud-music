@@ -29,6 +29,21 @@ Page({
       })
     })
   },
+  // 清除全部缓存数据
+  clearAll(){
+    wx.showModal({
+      title: '清除本地缓存数据',
+      content: '如果点击确定，则当前正在播放的歌曲信息被清除，请谨慎选择',
+      success(res) {
+        if (res.confirm) {
+          // console.log('用户点击确定')
+          wx.clearStorage()
+        } else if (res.cancel) {
+          // console.log('用户点击取消')
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -31,22 +31,14 @@ Page({
   _loadSongInfo: function (musicId){
     // console.log('musicId:'+musicId)
     // console.log('getPlayMusicId: '+app.getPlayMusicId())
-    if ( musicId == app.getPlayMusicId() ){ // 是同一首歌
-      this.setData({
-        isSameMusic: true
-      })
-    }else{
-      this.setData({
-        isSameMusic: false
-      })
-    }
-    if ( this.data.isSameMusic ){// 是同一首歌
-      // 播放歌曲
-      bgAudioManager.play()
-    } else {                // 不是同一首歌
-      // 暂停播放
-      bgAudioManager.stop()
-    }
+    // 是否是同一首歌
+    let isSameMusic = (musicId == app.getPlayMusicId()) ? true : false;
+    this.setData({
+      isSameMusic
+    });
+    // 是同一首歌，播放； 不是同一首歌，暂停
+    isSameMusic ? bgAudioManager.play() : bgAudioManager.stop();
+
     musicItemInfo = musiclist[musicIndex]
     // 设置导航栏标题为 音乐名称
     wx.setNavigationBarTitle({
@@ -68,14 +60,15 @@ Page({
         $url: 'songInfo'
       }
     }).then((res)=>{
-      // console.log(res)
+      console.log(res.result.data[0].url)
       // 歌曲资源来源于网易云音乐，有些歌曲可能需要会员权限
       if ( res.result.data[0].url == null ){ 
         wx.showToast({
           icon: 'none',
           title: '无权限播放',
-        })
-        return 
+        });
+        wx.hideLoading();
+        return;
       }
       if ( !this.data.isSameMusic ){ // 如果不是同一首歌
         bgAudioManager.src = res.result.data[0].url
@@ -123,9 +116,11 @@ Page({
           lyric
         })
       }).catch((err)=>{
+        wx.hideLoading()
         console.log(err)
       })
     }).catch((err)=>{
+      wx.hideLoading()
       console.log(err)
     })
   },

@@ -28,10 +28,18 @@
       <i class="iconfont icon-you"></i>
     </view>
   </navigator>
-  <navigator class="item" hover-class="none" bindtap="getMiniCode">
+  <navigator class="item" url="" hover-class="none" bindtap="getMiniCode">
     <view class="content">
       <i class="iconfont icon-ico icon"></i>
       <text class="title">小程序码</text>
+      <i class="iconfont icon-you"></i>
+    </view>
+  </navigator>
+  <navigator class="item" url="" hover-class="none"
+  bindtap="clearAll">
+    <view class="content">
+      <i class="iconfont icon-qingchu icon"></i>
+      <text class="title">清除缓存</text>
       <i class="iconfont icon-you"></i>
     </view>
   </navigator>
