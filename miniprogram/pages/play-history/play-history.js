@@ -1,4 +1,5 @@
 // pages/play-history/play-history.js
+const openid = getApp().globalData.openid
 Page({
 
   /**
@@ -6,6 +7,7 @@ Page({
    */
   data: {
     playHistory: [], // 播放记录
+    isShowClear: false, // 是否显示清除图标
   },
 
   /**
@@ -21,13 +23,23 @@ Page({
       })
     }else{
       this.setData({
-        playHistory
+        playHistory,
+        isShowClear: true
       })
       // 将播放列表替换为 playHistory
       wx.setStorageSync('musiclist', playHistory)
     }
   },
-
+  // 清除播放记录
+  clear(){
+    const openid = getApp().globalData.openid
+    // 移除指定 key 的缓存
+    wx.removeStorageSync(openid)
+    this.setData({
+      playHistory: [],
+      isShowClear: false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

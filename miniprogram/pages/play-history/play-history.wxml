@@ -1,1 +1,6 @@
 <x-musiclist musiclist="{{playHistory}}" />
+
+<!-- 清除播放记录 -->
+<view wx:if="{{isShowClear}}" bind:tap="clear" class="clear">
+  <i class="iconfont icon-qingchu"></i>
+</view>

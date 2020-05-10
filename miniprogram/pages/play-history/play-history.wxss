@@ -1,1 +1,18 @@
 /* pages/play-history/play-history.wxss */
+
+.clear{
+  position: fixed;
+  bottom: 20rpx; right: 20rpx;
+  height: 130rpx; width: 130rpx;
+  /* 将图标水平垂直居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.1);
+}
+
+.iconfont{
+  font-size: 60rpx;
+}
